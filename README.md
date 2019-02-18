@@ -1,4 +1,4 @@
-# MeetupMemberVerification
+# Meetup Tag Images of Members
 
 (In-Progress)
 
