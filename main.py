@@ -30,7 +30,7 @@ if __name__ == "__main__":
     api_key = Config.get('meetup', 'api_key')
     meetup_group = Config.get('meetup', 'meetup_group')
 
-    #meetupworker(api_key=api_key, meetup_group=meetup_group)
+    meetupworker(api_key=api_key, meetup_group=meetup_group)
 
     encodings = imageworker.loadencodings()
     imageworker.tagmembers('WorkingFolder/test/test_image_meetup.jpeg', encodings)
