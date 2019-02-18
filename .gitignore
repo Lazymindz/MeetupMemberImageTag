@@ -1,0 +1,12 @@
+# Ignore the virutal environment and folders
+.vscode/*
+__pycache__/*
+logs/*
+WorkingFolder/*
+.pymeetup/*
+.DS_Store
+.DS_Store?
+.metadata/*
+
+# Files
+config.ini
