@@ -21,7 +21,7 @@ def createandloadencodings():
             if len(name_face_encoding) > 0:
                 loaded_face_encodings[name] = name_face_encoding[0]
     np.save('./.metadata/meetup_faces.npy', loaded_face_encodings)
-    return loaded_face_encodings
+    return np.load('./.metadata/meetup_faces.npy')
 
 def loadencodings(retrain=False):
     if (not os.path.exists('./.metadata/meetup_faces.npy')) or (retrain==True):
@@ -29,7 +29,7 @@ def loadencodings(retrain=False):
     else:
         return np.load('./.metadata/meetup_faces.npy')
 
-def tagmembers(meetup_image, loaded_face_encodings, tolerance=0.6):
+def tagmembers(meetup_image, loaded_face_encodings, tolerance=0.55):
 
     known_face_names, known_face_encodings = list(loaded_face_encodings[()].keys()), list(loaded_face_encodings[()].values())
 
